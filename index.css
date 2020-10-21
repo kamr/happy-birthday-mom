@@ -36,7 +36,6 @@
 }
 
 .introBox {
-  background: url("./background.jpg") no-repeat;
   width: 752px;
   height: 564px;
   position: absolute;
@@ -46,8 +45,14 @@
   margin-top: -282px;
 }
 
+.cake {
+  margin-left: 100px;
+  margin-bottom: -50px;
+  z-index: -1;
+}
+
 .innerBox {
-  background-color: #F3F4F5;
+  /* background-color: #0080ff; */
   position: absolute;
   width: 400px;
   height: 200px;

@@ -48,9 +48,11 @@
 // }
 
 const celebrate = () => {
-  const duration = 3 * 1000;
+  const duration = 3 * 1000000;
   const animationEnd = Date.now() + duration;
-  const defaults = { startVelocity: 15, spread: 560, ticks: 1000, zIndex: 0 };
+  const defaults = { startVelocity: 15, spread: 560, ticks: 200, zIndex: 0,
+    colors: ['#d1c9c6', '#a2d5d0', '#b1dbd1', '#f2b6c2', '#e17f8c', '#FEE38A']
+  };
   
   function randomInRange(min, max) {
     return Math.random() * (max - min) + min;
