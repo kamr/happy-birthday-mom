@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Happy Birthday Saffie!</title>
+	<link rel="stylesheet" type="text/css" href="./script/fullpage.min.css" />
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <audio id="my_audio" src="https://www.8notes.com/school/mp32/piano/happy_birthday.mp3"></audio>
+  <audio id="stevie" src="./stevie-hbd.mp3"></audio>
+</head>
+<body>
+
+
+
+<div id="fullpage">
+	<div class="section " id="section0">
+    <div class="intro">
+      <div class="wrapper"></div>
+      <div class="introBox">
+        <div class="innerBox">
+    			<div><p class="title hbd">Happy Birthday</p></div>
+    			<p class="title saf">Mum!</p>
+        </div>
+  		</div>
+      <a class="nextButton" onclick="stopIntroSong()" href="#video"><i class="down"></i></a>
+    </div>
+	</div>
+	<div class="section" id="section1">
+    <div class="video">
+			<p class="title hbd-video">Happy Birthday!</p>
+			<div class="videoBox">
+        <video src="./video.mp4"  width="800" controls="false" data-autoplay></video>
+      </div>
+		</div>
+    <a class="nextButton" href="#present"><i class="down"></i></a>
+	</div>
+	<div class="section" id="section2">
+    <div id="pyrobox" class="pyro">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <div class="present">
+			<p id="title-open">Open your present!</p>
+      <p id="title-laptop">Surprise!</p>
+      <div id="wrapD3Cube">
+      	<div id="D3Cube" class="spinCube">
+      		<div id="side1" class="side"></div>
+      		<div id="side2" class="side"></div>
+      		<div id="side3" class="side"></div>
+      		<div id="side4" class="side"></div>
+      		<div id="side5" class="side"></div>
+      		<div id="side6" class="side"></div>
+          <div id="laptop"></div>
+      	</div>
+      </div>
+      <p id="click-laptop">Click the present to open it!</p>
+
+		</div>
+    <a class="nextButton" href="#selection"><i class="down"></i></a>
+	</div>
+  <div class="section" id="section2">
+    <div class="selection">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1RQL4zLhaLLh1-h-uVIfgNLfWmGjTBGfPPi6gwqE0GlM7CA/viewform?embedded=true" width="640" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript" src="./script/fullpage.min.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['intro', 'video', 'present', 'selection']
+        // sectionsColor: ['#FFF', '#FAA', '#7E8F7C']
+    });
+</script>
+
+<script type="text/javascript" src="./confetti.js"></script>
+
+</body>
+</html>
