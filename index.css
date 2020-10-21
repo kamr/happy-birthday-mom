@@ -24,14 +24,15 @@
 .nextButton {
   display: block;
   background: #F5C8CB;
-  width: 200px;
-  height: 50px;
+  width: 100%;
+  height: 150px;
   text-align: center;
   line-height: 50px;
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -50%;
+  padding-top: 50px;
 }
 
 .introBox {
