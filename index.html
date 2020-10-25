@@ -17,10 +17,10 @@
 <div id="fullpage">
 	<div class="section " id="section0">
     <div class="intro">
-      <div class="wrapper"></div>
-        <div class="innerBox">
-        <img class="cake" src="cake.gif" /> 
-        <img src="happy-birthday-transparent.png" /> 
+      <div class="innerBox">
+        <img class="img-cake" src="cake.gif" /> 
+        <img class="img-happybirthday" src="happy-birthday-transparent.png" /> 
+        <canvas id="my-canvas" class="custom-canvas" width="1000" height="380"></canvas>
   		</div>
       <a class="nextButton" onclick="stopIntroSong()" href="#video"><i class="down"></i></a>
     </div>
@@ -31,7 +31,9 @@
       <div class="after"></div>
     </div>
     <div class="present">
-			<p id="title-open">Open your present!</p>
+      <div class="typewriter">
+        <h1>We have a surprise for you!</h1>
+      </div>
       <p id="title-laptop">Surprise!</p>
       <div id="wrapD3Cube">
       	<div id="D3Cube" class="spinCube">
@@ -45,7 +47,32 @@
       	</div>
       </div>
       <p id="click-laptop">Click the present to open it!</p>
-		</div>
+    </div>
+    <a class="nextButton"><i class="down"></i></a>
+  </div>
+  <div class="section" id="section2">
+
+    <div class="fadein">
+      <img id="f3" src="images/mum (1).jpg">
+      <img id="f2" src="images/mum (2).jpg">
+      <img id="f1" src="images/mum (3).jpg">
+    </div>
+
+    <div class='container'>
+      <div class="empty"></div>
+      <div class='env'>
+        <label for='open-env'>
+          <input type='checkbox' id='open-env' />
+          <label class='top' for='open-env'></label>
+          <div class='content'>
+            <h2 class='content-text'>สุขสันต์วันเกิดวันเกิดนะคะ ขอให้มีความสุขมากๆ ดูแลสุขภาพ สวยๆแลละอยู่กับพวกหนูไปนานๆน้า อดทนและสู้ไปด้วยกันนะแม่ พวกหนูคิดถึงแม่และอยากกลับไปหาไวๆ รักที่สุด เดี๋ยวกลับไทยแล้วเอาของขวัญไปให้นะคะ จุ้บๆ ❤️ จาก น้ำฝน น้ำหวาน คำราน</h2>
+          </div>
+          <div class='rest'></div>
+        </label>
+      </div>
+    </div>
+    
+    
 	</div>
 </div>
 
@@ -59,7 +86,8 @@
     });
 </script>
 
-<script type="text/javascript" src="./confetti.js"></script>
+<!-- <script type="text/javascript" src="./confetti.js"></script> -->
+<script src="bundle.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1/dist/confetti.browser.min.js"></script>
 
 </body>

@@ -47,29 +47,62 @@
 //   });
 // }
 
-const celebrate = () => {
-  const duration = 3 * 1000000;
-  const animationEnd = Date.now() + duration;
-  const defaults = { startVelocity: 15, spread: 560, ticks: 200, zIndex: 0,
-    colors: ['#d1c9c6', '#a2d5d0', '#b1dbd1', '#f2b6c2', '#e17f8c', '#FEE38A']
-  };
-  
-  function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
-  }
-  
-  const interval = setInterval(function() {
-    const timeLeft = animationEnd - Date.now();
-    
-    if (timeLeft <= 0) {
-      return clearInterval(interval);
-    }
-  
-    const particleCount = 100 * (timeLeft / duration);
+confetti = require('canvas-confetti');
 
-    window.confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-    window.confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
-  }, 250);
+var myCanvas = document.getElementById('my-canvas');
+
+myCanvas.width = window.innerWidth;
+myCanvas.height = window.innerHeight;
+
+// var myConfetti = confetti.create(myCanvas, {
+//   resize: true,
+//   useWorker: true,
+//   particleCount: 50,
+//   origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+// });
+
+var duration = 15 * 1000;
+var animationEnd = Date.now() + duration;
+var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
 }
 
-celebrate();
+var interval = setInterval(function() {
+  var timeLeft = animationEnd - Date.now();
+
+
+  if (timeLeft <= 0) {
+    return clearInterval(interval);
+  }
+
+  var particleCount = 50 * (timeLeft / duration);
+
+  var myConfetti = confetti.create(myCanvas, {
+    resize: true,
+    useWorker: true,
+  });
+  
+  myConfetti({
+    startVelocity: 15,
+    spread: 560,
+    ticks: 200,
+    zIndex: 0,
+    colors: ['#d1c9c6', '#a2d5d0', '#b1dbd1', '#f2b6c2', '#e17f8c', '#FEE38A'],
+    particleCount: 50,
+    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+  });
+  myConfetti({
+    startVelocity: 15,
+    spread: 560,
+    ticks: 200,
+    zIndex: 0,
+    colors: ['#d1c9c6', '#a2d5d0', '#b1dbd1', '#f2b6c2', '#e17f8c', '#FEE38A'],
+    particleCount: 50,
+    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+  });
+  // since particles fall down, start a bit higher than random
+  // confetti.create(myCanvas, Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+  // confetti.create(myCanvas, Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+}, 250);
