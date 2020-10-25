@@ -614,12 +614,11 @@ i {
 /* envelope */
 .container {
   width: 90%;
-  margin: 30px auto;
   height: 100px;
-  left: 50%;
   bottom: 0;
   position: absolute;
   margin-left: -350px;
+  left: 50%;
 }
 
 .empty {
@@ -635,7 +634,7 @@ i {
 }
 
 .env {
-  margin: 0px auto 0;
+  bottom: 0;
   background: #ffc3b1;
   width: 700px;
   perspective: 3000px;
