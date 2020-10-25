@@ -611,23 +611,15 @@ i {
     margin-left: 80%;
   }
 }
-
 /* envelope */
-
-#section2 {
-  position: relative;
-}
-
 .container {
-
-  position: absolute;
-  bottom: 0;
-
-  width: 60%;
+  width: 90%;
   margin: 30px auto;
   height: 100px;
-  
   left: 50%;
+  bottom: 0;
+  position: absolute;
+  margin-left: -350px;
 }
 
 .empty {
@@ -636,16 +628,6 @@ i {
 
 #open-env {
   display: none;
-}
-
-
-
-.container {
-  /* width: 90%;
-  margin: 30px auto;
-  height: 100px;
-  top: 70%; */
-  
 }
 
 #open-env {

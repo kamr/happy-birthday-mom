@@ -593,10 +593,14 @@ $rr:#F44336;
 // }
 
 .container {
-	width:60%;
+	width:90%;
   margin:30px auto;
   height: 100px;
-  top: 70%;
+
+  left: 50%;
+  bottom: 0 ;
+  position: absolute;
+  margin-left: -350px; 
 }
 .empty {
   height: 400px
@@ -604,21 +608,6 @@ $rr:#F44336;
 
 #open-env {
 	display:none;
-}
-
-.container {
-	width:90%;
-  margin:30px auto;
-  height: 100px;
-  top: 70%;
-
-  // bottom: 50px; 
-  // width: 100%; 
-  // height: px; 
-  // border: 1px solid red;
-}
-.empty {
-  height: 500px;
 }
 
 #open-env {
